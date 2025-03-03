@@ -21,22 +21,23 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    int number = 0;
+    float number = 0;
 
-    enum _operator { none, add, sub, mult, div, eq };
+    enum _operator { none, add, sub, mult, div, eq, prc };
     _operator m_operator = none;
     bool choosOp = false;
 
 signals:
-    void digit_pressed(quint8);
+    void digit_pressed(QString);
 
 public slots:
-    void print_digit(quint8 digit);
+    void print_digit(QString digit);
     void plus();
     void equals();
     void minus();
     void multiply();
     void divide();
+    void pracent();
 };
 
 #endif // MAINWINDOW_H
