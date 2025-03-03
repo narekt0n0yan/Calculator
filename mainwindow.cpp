@@ -96,7 +96,7 @@ void MainWindow::equals()
         m_operator = none;
         number = 0;
     }
-    ui->label->setText(QString::number(number));
+        ui->label->setText(QString::number(number, 'f',4));
     m_operator = eq;
 }
 
